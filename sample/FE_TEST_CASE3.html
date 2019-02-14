@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEST CASE 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+          
+    </script>
+</head>
+<body>
+    <!--
+        javascript 또는 jquery를 이용해 testA click시 checked 처리된 table row를 삭제 하는 script를 작성 하세요.
+        dom element id, name, class 설정 무관.
+    -->
+    <div>
+        <a id="testA">Remove Row</a>
+        <table>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>1</td>
+                <td>ecbank</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>2</td>
+                <td>개발부</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td>3</td>
+                <td>CASE3</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+<!--
+    정답 EX>
+    $( document ).ready(function() {
+        $('#testA').on('click', function() {
+            var checkedEle = $("input:checked").length;
+            if(checkedEle > 0){
+                $("input:checked").closest("tr").remove(); 또는
+                $("table").find("input:checked").parents('tr').remove();
+            }
+        });
+    });
+    최대한 loop를 사용하지 않고, checked 되지 않은 경우에 대한 고려를 한 경우.
+    의도: jquery 숙련도 및 DOM 구조를 얼마나 이해 하고 있는지 확인 하기 위함.
+-->

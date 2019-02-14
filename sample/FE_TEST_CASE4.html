@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEST CASE 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+          
+    </script>
+</head>
+<body>
+    <!--
+        ajax를 통해, 외부 사이트를 호출하는 경우.
+        Access-Control-Allow-Origin 라는 메세지를 브라우저 콘솔을 통해 확인하게 되는 경우가 있습니다.
+        위 메세지가 발생하는 이유와, 해결 방법을 작성하세요.
+        client side, server side 관계없이 설명.
+        server side에 framework 허용.
+    -->
+</body>
+</html>
+<!--
+    답안:
+    원인: 동일 출처 정책(Same-Origin Policy)으로 인해, 자바스크립트로 다른 페이지를 호출 하는 경우 출처가 같은 페이지 에서만 접근이 가능.
+    해결방법: CORS(Cross-Origin Resource Sharing)에 대한 언급.
+             EX> client side: ajax dataType을 jsonp방식으로 단, mehtod는 get방식 사용.(받는 서버에서의 고려는 생략.)
+                 server side: 서버 response header등에 Access-Control-Allow~ 처리 또는 springframework에 CORS supprt)
+     
+                 즉, 요청을 받는 쪽에서 CORS에 대한 처리가 고려 되어야 함.                          
+    의도: 웹 프로젝트간 한번쯤은 겪게되는 문제로, 경험치 확인과 해결 방식에 대한 인지가 있는지 확인.
+          springframework cors support를 명시하는 경우 springframework 4.*대의 경험치 확인.
+-->

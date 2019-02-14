@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEST CASE 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <!--
+        Client Side 시점에서의
+        디바운싱(Debouncing)과 쓰로틀링(Throttling)을 간략 하게 설명하고,
+        Debouncing, Throttling이 필요한 사례를 간략하게 설명 하세요.
+    -->
+    <div>WELCOME ECBANK</div>
+</body>
+</html>
+<!--
+    답안
+    디바운싱: 중복호출되는 함수들중 마지막 함수만 실행되도록 하는 것.
+             사례: input Event를 통해 결과를 서버나 외부 API를 통해 받는 경우라면,
+                   타자를 반복적으로 빨리치는 경우가 많기 때문에, 글자마다 이벤트가 ajax 호출이 발생해
+                   그에 따른 부하나 비용이 발생하기 때문에 디바운싱이 필요.(EX 외부 유료 API를 호출 하는 경우)
+    쓰로틀링: 이벤트를 지연 호출 처리 하는 것. 
+             사례: 스크롤을 내릴때마다 목록을 조회해 오는 lazyScroll을 사용하는 경우,
+                   스크롤이 움직일때 마다 불필요한 이벤트가 발생하여,
+                   Client단에 부하가 발생하는 것을 최소화 하기 위해 쓰로틀링이 필요.
+    즉, 디바운싱과 쓰로틀링이 불필요한 호출을 최소화 하기 위해 필요한 기법이라는 것을 설명 하는 것이 중요.               
+    의도: 디바운싱과 쓰로틀링에 대한 개념과 필요성을 파악하고 있는지.(반복 트렌젝션 최소화, 화면 랜더링 최소화...)
+-->
